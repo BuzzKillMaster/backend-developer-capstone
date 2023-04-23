@@ -12,3 +12,6 @@ class Menu(Model):
     title = CharField(max_length=255)
     price = DecimalField(max_digits=10, decimal_places=2)
     inventory = IntegerField()
+
+    def __str__(self):
+        return f'{self.title}: {str(self.price)}'
